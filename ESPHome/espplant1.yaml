@@ -1,0 +1,79 @@
+esphome:
+  name: espplant1
+
+esp8266:
+  board: esp8285
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  reboot_timeout: 0s
+  encryption:
+    key: "gjsLqPKgP2Z9Pfepf7dZ7A/WgMfHv6xao5Py5RTazvA="
+
+ota:
+  password: "00541494ac0d6f6afecb068eb95385c6"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  fast_connect: true
+  reboot_timeout: 0s
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Espplant1 Fallback Hotspot"
+    password: "EuI3iqfYo2xF"
+
+captive_portal:
+
+sensor:
+  - platform: adc
+    pin: GPIO17
+    id: battery    
+    name: "ADC_battery"
+    update_interval: 2s
+    filters:
+      - multiply: 4.25
+
+
+mqtt:
+  broker: !secret mqtt_server
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  reboot_timeout: 0s
+
+  on_message:
+    - topic: espplant1/ota_mode
+      payload: 'ON'
+      then:
+        - deep_sleep.prevent: deep_sleep_1
+    - topic: espplant1/sleep_mode
+      payload: 'ON'
+      then:
+        - deep_sleep.allow: deep_sleep_1
+    - topic: espplant1/light_on
+      payload: 'ON'
+      then:
+        - light.turn_on: plant_light_1
+    - topic: espplant1/light_off
+      payload: 'ON'
+      then:
+        - light.turn_off: plant_light_1
+
+light:
+
+  - platform: neopixelbus
+    variant: WS2812
+    pin: GPIO14
+    num_leds: 4
+    type: GRB
+    name: "Plant Light 1"
+    id: plant_light_1
+
+deep_sleep:
+  run_duration: 30s
+  sleep_duration: 1min
+  id: deep_sleep_1
