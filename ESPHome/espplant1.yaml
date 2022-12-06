@@ -11,7 +11,7 @@ logger:
 api:
   reboot_timeout: 0s
   encryption:
-    key: "gjsLqPKgP2Z9Pfepf7dZ7A/WgMfHv6xao5Py5RTazvA="
+    key: !secret api_key
 
 ota:
   password: "00541494ac0d6f6afecb068eb95385c6"
