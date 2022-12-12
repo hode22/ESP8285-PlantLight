@@ -1450,7 +1450,6 @@
     )
   )
 
-
   (junction (at 171.45 48.26) (diameter 0) (color 0 0 0 0)
     (uuid 00e39796-b13f-4078-b496-1e41081612a0)
   )
@@ -3369,7 +3368,7 @@
     (pin "9" (uuid 42a0a474-6e73-443c-bccf-c065b3abbaa5))
   )
 
-  (symbol (lib_id "Diode:BZX84Cxx") (at 69.85 151.13 0) (unit 1)
+  (symbol (lib_id "Diode:BZX84Cxx") (at 69.85 151.13 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 81819f46-8b0c-48e9-a31b-212cb8a4a9f8)
     (property "Reference" "D1" (id 0) (at 69.85 144.78 0))
@@ -3805,16 +3804,16 @@
     (pin "2" (uuid 446bee23-ea31-48be-9286-44dd337aa875))
   )
 
-  (symbol (lib_id "Transistor_FET:DMP3013SFV") (at 90.17 151.13 0) (unit 1)
+  (symbol (lib_id "Transistor_FET:DMP3013SFV") (at 90.17 151.13 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e6b445bc-e659-4fa9-ac84-a9056cb66a5e)
-    (property "Reference" "Q1" (id 0) (at 96.52 149.8599 0)
+    (property "Reference" "Q1" (id 0) (at 96.52 152.4001 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "P-Chan Mosfet" (id 1) (at 96.52 152.3999 0)
+    (property "Value" "P-Chan Mosfet" (id 1) (at 96.52 149.8601 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_SON:VSON-8_3.3x3.3mm_P0.65mm_NexFET" (id 2) (at 95.25 153.035 0)
+    (property "Footprint" "Package_SON:VSON-8_3.3x3.3mm_P0.65mm_NexFET" (id 2) (at 95.25 149.225 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" (id 3) (at 90.17 151.13 90)
