@@ -1,0 +1,48 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,(6.0.9)*%
+%TF.CreationDate,2022-12-14T11:00:14+00:00*%
+%TF.ProjectId,ESP8285 PlantLight,45535038-3238-4352-9050-6c616e744c69,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L2,Bot*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW (6.0.9)) date 2022-12-14 11:00:14*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,ComponentPad*%
+%ADD10R,1.700000X1.700000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD11O,1.700000X1.700000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD12C,3.600000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.P,J1,1,Pin_1*%
+%TO.N,/J1_ADC_IN*%
+X157480000Y-85867000D03*
+D11*
+%TO.P,J1,2,Pin_2*%
+%TO.N,V_BAT*%
+X157480000Y-88407000D03*
+%TO.P,J1,3,Pin_3*%
+%TO.N,GND*%
+X157480000Y-90947000D03*
+%TD*%
+D12*
+%TO.P,BT1,1,+*%
+%TO.N,/+BAT*%
+X152400000Y-45720000D03*
+X154940000Y-53340000D03*
+X149860000Y-53340000D03*
+%TO.P,BT1,2,-*%
+%TO.N,GND*%
+X149860000Y-104140000D03*
+X152400000Y-111760000D03*
+X154940000Y-104140000D03*
+%TD*%
+M02*
